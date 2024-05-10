@@ -8,9 +8,9 @@ export default async function handler(
   context: Context
 ): Promise<Response> {
 
-  if (!appConfig.sk-proj-jfSia0wJbsqrGc3G6afsT3BlbkFJFp3UyWw3EOA5pG2L64me || !appConfig.systemPrompt) {
+  if (!appConfig.OPENAI_API_KEY || !appConfig.systemPrompt) {
     throw new Error(
-      "sk-proj-jfSia0wJbsqrGc3G6afsT3BlbkFJFp3UyWw3EOA5pG2L64me and systemPrompt must be set in config.edge.ts"
+      "OPENAI_API_KEY and systemPrompt must be set in config.edge.ts"
     );
   }
 
@@ -43,7 +43,7 @@ export default async function handler(
           ...messages,
         ],
       },
-      appConfig.sk-proj-jfSia0wJbsqrGc3G6afsT3BlbkFJFp3UyWw3EOA5pG2L64me ?? ""
+      appConfig.OPENAI_API_KEY ?? ""
     );
     return new Response(stream, {
       headers: {
