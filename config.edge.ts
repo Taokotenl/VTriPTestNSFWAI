@@ -6,7 +6,7 @@ import { prompt } from "./prompts/movie-critic.ts";
 export const appConfig: AppConfig = {
   // This should be set in an environment variable
   // See https://platform.openai.com/account/api-keys
-  OPENAI_API_KEY: Netlify.env.get("sk-proj-jfSia0wJbsqrGc3G6afsT3BlbkFJFp3UyWw3EOA5pG2L64me") ?? "",
+  OPENAI_API_KEY: Netlify.env.get("sk-proj-sk-proj-aXXRODNrsMxNSNWgkkazT3BlbkFJbKVxociii37nKwwwoUKJ") ?? "",
 
   // The maximum number of message in the history to send to the API
   // You should also set this in the config.browser.ts file.
